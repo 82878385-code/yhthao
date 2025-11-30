@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>数智督查部 | 日常汇报与考勤管理作业指导书</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Noto Sans SC', sans-serif;
+            background-color: #f8fafc;
+        }
+        /* 移除时间线相关样式 */
+        .gradient-header {
+            background: linear-gradient(135deg, #1e40af 0%, #3b82f6 100%);
+        }
+    </style>
+</head>
+<body class="text-slate-800 antialiased">
+
+    <!-- Header Section (更紧凑) -->
+    <header class="gradient-header text-white pb-12 pt-8 rounded-b-xl shadow-lg relative overflow-hidden">
+        <div class="absolute top-0 right-0 p-8 opacity-10">
+            <svg xmlns="http://www.w3.org/2000/svg" width="150" height="150" fill="currentColor" viewBox="0 0 16 16">
+                <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
+                <path d="M10.97 4.97a.235.235 0 0 0-.02.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-1.071-1.05z"/>
+            </svg>
+        </div>
+        <div class="container mx-auto px-6 relative z-10 text-center">
+            <div class="inline-block bg-white/20 px-3 py-0.5 rounded-full text-xs font-semibold mb-2 backdrop-blur-sm border border-white/30">
+                数智督查部 · 标准化流程
+            </div>
+            <h1 class="text-2xl md:text-3xl font-bold mb-2 tracking-tight">每日关键任务指导书</h1>
+            <p class="text-blue-100 max-w-2xl mx-auto text-sm">明确职责，紧盯时间节点。以下为每日需执行任务列表。</p>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="container mx-auto px-4 -mt-4 relative z-20 pb-10">
+        
+        <!-- Legend/Roles -->
+        <div class="bg-white rounded-xl shadow-lg p-4 mb-6 flex flex-wrap justify-center gap-3 text-xs font-medium border border-slate-100">
+            <div class="flex items-center gap-1.5">
+                <span class="w-2.5 h-2.5 rounded-full bg-purple-600"></span> 崔总 (督查部负责人)
+            </div>
+            <div class="flex items-center gap-1.5">
+                <span class="w-2.5 h-2.5 rounded-full bg-emerald-500"></span> 班组长/主管
+            </div>
+            <div class="flex items-center gap-1.5">
+                <span class="w-2.5 h-2.5 rounded-full bg-orange-500"></span> 小组长 (片区)
+            </div>
+        </div>
+
+        <!-- Compact Task List -->
+        <div class="space-y-4">
+
+            <!-- 1. 考勤数据公示 (上午 10:00) -->
+            <div class="bg-white p-4 rounded-xl shadow-md border-l-4 border-purple-600">
+                <div class="flex items-center justify-between mb-2 pb-2 border-b border-slate-100">
+                    <div class="flex items-center gap-2">
+                        <span class="bg-purple-600 text-white text-sm px-2 py-0.5 rounded-full font-bold w-20 text-center">上午 10:00</span>
+                        <h3 class="font-bold text-lg text-slate-800">考勤数据公示</h3>
+                    </div>
+                    <span class="bg-purple-100 text-purple-700 text-xs px-2 py-1 rounded font-bold hidden md:block">数智督查部负责人 (崔总)</span>
+                </div>
+                <div class="text-sm">
+                    <p class="text-slate-600 mb-2">任务：发送前一日各片区考勤核心数据。</p>
+                    <ul class="text-xs text-slate-500 list-disc list-inside ml-2 space-y-0.5">
+                        <li>原始考勤正常率</li>
+                        <li>修正考勤正常率</li>
+                        <li>考勤异常原因明细表</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- 2. 异常考勤核对与修正 (中午 12:00) -->
+            <div class="bg-white p-4 rounded-xl shadow-md border-l-4 border-emerald-500">
+                <div class="flex items-center justify-between mb-2 pb-2 border-b border-slate-100">
+                    <div class="flex items-center gap-2">
+                        <span class="bg-emerald-500 text-white text-sm px-2 py-0.5 rounded-full font-bold w-20 text-center">中午 12:00</span>
+                        <h3 class="font-bold text-lg text-slate-800">异常考勤核对与修正</h3>
+                    </div>
+                    <span class="bg-emerald-100 text-emerald-700 text-xs px-2 py-1 rounded font-bold hidden md:block">各实施片区 班组长/主管</span>
+                </div>
+                <div class="text-sm">
+                    <p class="text-slate-600 mb-2">任务：通过“城市环境APP”考勤模块，核对异常考勤人员，并对数据进行修正。</p>
+                    <div class="bg-slate-50 p-2 rounded border border-slate-200 text-xs">
+                        <strong class="block text-slate-700 mb-1">关键操作：</strong>
+                        <ol class="list-decimal list-inside text-slate-500 space-y-0.5 ml-2">
+                            <li>查看异常人员</li>
+                            <li>核实情况，如有出入<span class="text-red-500 font-bold">立即修正</span></li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 3 & 4. APP安装进度汇报 (18:00 下午 & 20:00 下午) -->
+            <div class="bg-white p-4 rounded-xl shadow-md border-l-4 border-orange-500">
+                <div class="flex items-center justify-between mb-2 pb-2 border-b border-slate-100">
+                    <div class="flex items-center gap-2">
+                        <span class="bg-orange-500 text-white text-sm px-2 py-0.5 rounded-full font-bold w-20 text-center">晚间汇报</span>
+                        <h3 class="font-bold text-lg text-slate-800">APP安装进度日报</h3>
+                    </div>
+                </div>
+
+                <!-- 18:00 下午 Task Detail -->
+                <div class="mb-4 pt-2">
+                    <p class="text-slate-700 font-semibold mb-1 flex items-center gap-1">
+                        <span class="text-emerald-500">● 18:00 下午 (班组长/主管)：</span> 发送班组级日报给实施小组长和项目大群。
+                    </p>
+                    <!-- Template Box 18:00 (班组级模板) -->
+                    <div class="bg-yellow-50 border border-yellow-300 text-slate-800 p-3 rounded-lg text-sm relative mt-1">
+                        <button onclick="copyToClipboard('template-supervisor')" class="absolute top-1 right-1 bg-yellow-200 hover:bg-yellow-300 text-yellow-800 px-2 py-0.5 rounded text-xs transition-colors"></button>
+                        <div id="template-supervisor">
+                            （示例）人民路片区1组今日安装进度:<br>
+                            总人数: 28人<br>
+                            已安装: 18人<br>
+                            老人机: 2人(已持手机拍照并现场接通电话核实)<br>
+                            未安装: 8人
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 20:00 下午 Task Detail -->
+                <div>
+                    <p class="text-slate-700 font-semibold mb-1 flex items-center gap-1">
+                        <span class="text-orange-500">● 20:00 下午 (实施小组长)：</span> 汇总片区级日报，发送至项目大群。
+                    </p>
+                    <!-- Template Box 20:00 (片区级模板) -->
+                    <div class="bg-yellow-50 border border-yellow-300 text-slate-800 p-3 rounded-lg text-sm relative mt-1">
+                        <button onclick="copyToClipboard('template-leader')" class="absolute top-1 right-1 bg-yellow-200 hover:bg-yellow-300 text-yellow-800 px-2 py-0.5 rounded text-xs transition-colors"></button>
+                        <div id="template-leader">
+                            （示例）人民路片区今日安装进度:<br>
+                            总人数: 108人<br>
+                            已安装: 88人<br>
+                            老人机: 7人(已持手机拍照并现场接通电话核实)<br>
+                            未安装: 13人
+                        </div>
+                    </div>
+                    <div class="mt-2 text-xs text-red-600 bg-red-50 p-2 rounded">
+                        ⚠️ 双重核实：老人机必须完成“拍照”与“现场接通电话核实”两项动作。
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+
+        <!-- FAQ/Tips Section -->
+        <div class="mt-8 grid md:grid-cols-2 gap-4">
+            <div class="bg-white p-4 rounded-xl shadow-sm border border-slate-100">
+                <h4 class="font-bold text-slate-800 flex items-center gap-2 mb-2 text-sm">
+                    <svg class="w-4 h-4 text-blue-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                    数据逻辑提示
+                </h4>
+                <ul class="text-xs text-slate-600 space-y-1">
+                    <li>• 未安装人数 = 总人数 - (已安装 + 老人机)</li>
+                    <li>• 老人机认定：仅凭口头说明无效，必须有照片和现场系统留存电话接通佐证。</li>
+                    <li>• 修正考勤：12点前的修正是为了保证次日公示的数据准确性。</li>
+                </ul>
+            </div>
+            <div class="bg-white p-4 rounded-xl shadow-sm border border-slate-100">
+                <h4 class="font-bold text-slate-800 flex items-center gap-2 mb-2 text-sm">
+                    <svg class="w-4 h-4 text-blue-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z"></path></svg>
+                    APP操作小贴士
+                </h4>
+                <p class="text-xs text-slate-600 mb-2">遇到APP无法打卡或数据异常时：</p>
+                <div class="flex flex-wrap gap-2">
+                    <span class="bg-slate-100 text-slate-600 text-xs px-2 py-0.5 rounded">检查定位权限</span>
+                    <span class="bg-slate-100 text-slate-600 text-xs px-2 py-0.5 rounded">片区组长</span>
+                    <span class="bg-slate-100 text-slate-600 text-xs px-2 py-0.5 rounded">联系数字督察部</span>
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-slate-800 text-slate-400 py-6 text-center text-xs mt-6">
+        <p>© 2025 数智督查部 | 内部管理系统</p>
+        <p class="mt-1 opacity-60">规范 · 高效 · 真实</p>
+    </footer>
+
+    <!-- Notification Toast -->
+    <div id="toast" class="fixed bottom-4 left-1/2 transform -translate-x-1/2 bg-slate-900 text-white px-6 py-3 rounded-full shadow-2xl transition-all duration-300 opacity-0 translate-y-10 z-50 flex items-center gap-2">
+        <svg class="w-5 h-5 text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+        <span>内容已复制到剪贴板</span>
+    </div>
+
+    <script>
+        // JavaScript for copy to clipboard and toast notification remains the same
+        function copyToClipboard(elementId) {
+            const text = document.getElementById(elementId).innerText;
+            
+            // Modern Clipboard API
+            if (navigator.clipboard && window.isSecureContext) {
+                navigator.clipboard.writeText(text).then(() => {
+                    showToast();
+                }).catch(err => {
+                    console.error('Failed to copy text using Clipboard API: ', err);
+                    fallbackCopy(text);
+                });
+            } else {
+                fallbackCopy(text);
+            }
+        }
+
+        function fallbackCopy(text) {
+            const textArea = document.createElement("textarea");
+            textArea.value = text;
+            textArea.style.position = "fixed";
+            textArea.style.left = "-9999px";
+            document.body.appendChild(textArea);
+            textArea.focus();
+            textArea.select();
+            try {
+                document.execCommand('copy');
+                showToast();
+            } catch (err) {
+                console.error('Fallback copy failed', err);
+            }
+            document.body.removeChild(textArea);
+        }
+
+        function showToast() {
+            const toast = document.getElementById('toast');
+            toast.classList.remove('opacity-0', 'translate-y-10');
+            
+            setTimeout(() => {
+                toast.classList.add('opacity-0', 'translate-y-10');
+            }, 2000);
+        }
+    </script>
+</body>
+</html>
