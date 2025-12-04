@@ -1,350 +1,66 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>城市环境服务权限配置培训教程</title>
-    <!-- 加载 Tailwind CSS -->
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>复盘 2025，决胜 2026</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              corporate: {
+                50: '#f0f9ff',
+                100: '#e0f2fe',
+                800: '#075985',
+                900: '#0c4a6e',
+              },
+              alert: '#dc2626',
+              success: '#16a34a'
+            },
+            fontFamily: {
+              sans: ['Inter', 'system-ui', 'sans-serif'],
+              serif: ['Merriweather', 'serif'],
+            }
+          }
+        }
+      }
+    </script>
     <style>
-        /* Inter is the default font for Tailwind */
-        body {
-            font-family: 'Inter', sans-serif;
-        }
-        /* Style for all step cards */
-        .step-card {
-            transition: transform 0.2s, box-shadow 0.2s;
-        }
-        .step-card:hover {
-            transform: translateY(-4px);
-            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
-        }
+      /* Custom Scrollbar for a cleaner look */
+      ::-webkit-scrollbar {
+        width: 8px;
+      }
+      ::-webkit-scrollbar-track {
+        background: #f1f1f1; 
+      }
+      ::-webkit-scrollbar-thumb {
+        background: #c1c1c1; 
+        border-radius: 4px;
+      }
+      ::-webkit-scrollbar-thumb:hover {
+        background: #a8a8a8; 
+      }
+      html {
+        scroll-behavior: smooth;
+      }
     </style>
+  <script type="importmap">
+{
+  "imports": {
+    "lucide-react": "https://aistudiocdn.com/lucide-react@^0.555.0",
+    "react/": "https://aistudiocdn.com/react@^19.2.1/",
+    "react": "https://aistudiocdn.com/react@^19.2.1",
+    "recharts": "https://aistudiocdn.com/recharts@^3.5.1",
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.1/"
+  }
+}
+</script>
+<link rel="stylesheet" href="/index.css">
 </head>
-<body class="min-h-screen bg-gray-50 antialiased">
-
-    <!-- Header/Hero Section (Using a strong red color for branding) -->
-    <header class="bg-red-700 text-white shadow-2xl">
-        <div class="max-w-7xl mx-auto py-10 px-4 sm:px-6 lg:px-8">
-            <h1 class="text-4xl font-extrabold tracking-tight sm:text-5xl lg:text-6xl text-center">
-                城市环境服务权限配置培训教程
-            </h1>
-            <p class="mt-4 text-xl text-red-100 text-center max-w-4xl mx-auto">
-                确保您的移动设备（Android/HarmonyOS 及 iOS）权限设置准确无误，保障“作业云”APP的定位、考勤、后台运行等核心功能稳定。
-            </p>
-            <div class="mt-6 text-center text-sm text-red-200 font-semibold">
-                <p>— 本手册适用于 Android、HarmonyOS 及 iOS 主流版本手机 —</p>
-            </div>
-        </div>
-    </header>
-
-    <main class="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:px-8">
-
-        <!-- Training Warning/Context Card -->
-        <div class="bg-yellow-50 border-l-4 border-yellow-400 p-4 mb-12 rounded-lg shadow-md">
-            <div class="flex items-start">
-                <div class="flex-shrink-0 text-yellow-500 pt-1">
-                    <!-- Icon: Exclamation Triangle -->
-                    <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" />
-                    </svg>
-                </div>
-                <div class="ml-3">
-                    <h3 class="text-lg leading-6 font-medium text-yellow-800">跨品牌配置差异说明</h3>
-                    <p class="mt-1 text-sm text-yellow-700">
-                        由于各手机厂商（如华为、小米、OPPO、vivo、苹果等）的系统定制，<span class="font-extrabold text-red-600">设置界面的名称和位置可能有所不同</span>。请根据教程中的<span class="font-extrabold text-red-600">功能描述</span>和<span class="font-extrabold text-red-600">关键词</span>灵活查找和配置，确保功能被正确开启。
-                    </p>
-                </div>
-            </div>
-        </div>
-
-        <!-- Section 1: In-App Permission Check (Android/HarmonyOS) -->
-        <section class="mb-12">
-            <h2 class="text-3xl font-bold text-gray-800 border-b-4 border-red-700 pb-3 mb-8">
-                <span class="text-red-700">步骤一：</span> APP 内权限检查（授权管理）
-            </h2>
-            <p class="text-gray-600 mb-6 font-semibold">
-                （本节主要针对 <span class="text-red-700">Android/HarmonyOS</span> 设备）
-            </p>
-
-            <div class="space-y-8">
-                <!-- Step 1.1 -->
-                <div class="bg-white p-6 rounded-xl shadow-2xl step-card border-l-4 border-red-500">
-                    <div class="flex items-start space-x-4">
-                        <div class="flex-shrink-0 w-12 h-12 bg-red-700 text-white rounded-full flex items-center justify-center font-extrabold text-2xl">1</div>
-                        <div>
-                            <p class="text-xl font-bold text-gray-900 mb-2">进入 APP 授权管理页面</p>
-                            <p class="text-gray-700 leading-relaxed">
-                                按照以下路径操作：<br>
-                                <span class="font-mono bg-gray-100 px-3 py-1 rounded-md text-red-600 font-semibold text-sm">打开城市环境服务</span> &rarr; <span class="font-mono bg-gray-100 px-3 py-1 rounded-md text-red-600 font-semibold text-sm">点击“作业检查”</span> &rarr; <span class="font-mono bg-gray-100 px-3 py-1 rounded-md text-red-600 font-semibold text-sm">点击右上方“授权管理”</span>
-                            </p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Step 1.2 -->
-                <div class="bg-white p-6 rounded-xl shadow-2xl step-card border-l-4 border-red-500">
-                    <div class="flex items-start space-x-4">
-                        <div class="flex-shrink-0 w-12 h-12 bg-red-700 text-white rounded-full flex items-center justify-center font-extrabold text-2xl">2</div>
-                        <div>
-                            <p class="text-xl font-bold text-gray-900 mb-3">逐项<span class="text-red-600 font-extrabold">开启</span>所有系统权限 <span class="text-red-600 ml-2">(显示为☑️)</span></p>
-                            <p class="text-gray-700 mb-3">
-                                在“授权管理”页面中，您需要确保以下所有权限的开关都处于<span class="text-red-600 font-extrabold">开启</span>状态，尤其是**后台位置信息**。
-                            </p>
-                            <div class="grid grid-cols-2 sm:grid-cols-3 gap-4 text-sm font-semibold text-gray-700">
-                                <span class="flex items-center p-2 bg-green-50 rounded-lg"><span class="text-green-500 text-lg mr-2">✓</span> 相机</span>
-                                <span class="flex items-center p-2 bg-green-50 rounded-lg"><span class="text-green-500 text-lg mr-2">✓</span> 存储/文件访问</span>
-                                <span class="flex items-center p-2 bg-green-50 rounded-lg"><span class="text-green-500 text-lg mr-2">✓</span> 位置信息 (前台)</span>
-                                <span class="flex items-center p-2 bg-green-50 rounded-lg font-extrabold text-red-700"><span class="text-red-700 text-lg mr-2">✓</span> 后台位置信息</span>
-                                <span class="flex items-center p-2 bg-green-50 rounded-lg"><span class="text-green-500 text-lg mr-2">✓</span> 运动与健身</span>
-                                <span class="flex items-center p-2 bg-green-50 rounded-lg"><span class="text-green-500 text-lg mr-2">✓</span> 允许后台活动</span>
-                                <span class="flex items-center p-2 bg-green-50 rounded-lg"><span class="text-green-500 text-lg mr-2">✓</span> 消息通知</span>
-                                <span class="flex items-center p-2 bg-green-50 rounded-lg"><span class="text-green-500 text-lg mr-2">✓</span> 蓝牙</span>
-                                <span class="flex items-center p-2 bg-green-50 rounded-lg"><span class="text-green-500 text-lg mr-2">✓</span> <span class="text-red-600 font-extrabold">关闭</span>省电模式</span>
-                                <span class="flex items-center p-2 bg-green-50 rounded-lg"><span class="text-green-500 text-lg mr-2">✓</span> 自启动</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Section 2: System Settings Check (Android/HarmonyOS) -->
-        <section class="mb-12">
-            <h2 class="text-3xl font-bold text-gray-800 border-b-4 border-red-700 pb-3 mb-8">
-                <span class="text-red-700">步骤二：</span> 手机系统设置检查与优化
-            </h2>
-            <p class="text-gray-600 mb-6 font-semibold">
-                （本节主要针对 <span class="text-red-700">Android/HarmonyOS</span> 设备）
-            </p>
-
-            <div class="space-y-8">
-                
-                <!-- Step 2.1: 状态栏开关检查 -->
-                <div class="bg-white p-6 rounded-xl shadow-2xl step-card border-l-4 border-red-500">
-                    <div class="flex items-start space-x-4 mb-4">
-                        <div class="flex-shrink-0 w-12 h-12 bg-red-700 text-white rounded-full flex items-center justify-center font-extrabold text-2xl">3</div>
-                        <div>
-                            <p class="text-xl font-bold text-gray-900 mb-2">状态栏基础开关检查 (网络与定位)</p>
-                            <p class="text-gray-700 leading-relaxed">
-                                下滑手机屏幕顶部状态栏，确保以下四个核心开关全部处于<span class="text-red-600 font-extrabold">开启</span>状态：
-                            </p>
-                        </div>
-                    </div>
-                    <div class="grid grid-cols-2 md:grid-cols-4 gap-4 pt-4 font-semibold text-center border-t border-gray-100">
-                        <div class="p-3 bg-red-100 rounded-lg"><span class="text-2xl mr-2">📡</span> 移动数据</div>
-                        <div class="p-3 bg-red-100 rounded-lg"><span class="text-2xl mr-2">🌐</span> WLAN/WiFi</div>
-                        <div class="p-3 bg-red-100 rounded-lg"><span class="text-2xl mr-2">📍</span> 位置信息/定位</div>
-                        <div class="p-3 bg-red-100 rounded-lg"><span class="text-2xl mr-2">🅱️</span> 蓝牙</div>
-                    </div>
-                </div>
-
-                <!-- Step 2.2: APP 自启动权限 -->
-                <div class="bg-white p-6 rounded-xl shadow-2xl step-card border-l-4 border-red-500">
-                    <div class="flex items-start space-x-4 mb-4">
-                        <div class="flex-shrink-0 w-12 h-12 bg-red-700 text-white rounded-full flex items-center justify-center font-extrabold text-2xl">4</div>
-                        <div>
-                            <p class="text-xl font-bold text-gray-900 mb-2">APP 自启动权限配置 (确保后台运行)</p>
-                            <p class="text-gray-700 leading-relaxed">
-                                路径：<span class="font-extrabold text-red-600">手机设置</span> &rarr; <span class="font-extrabold text-red-600">应用管理</span> (或 权限管理) &rarr; 找到 <span class="font-extrabold text-red-600">城市环境服务</span>。
-                            </p>
-                        </div>
-                    </div>
-                    <ul class="list-disc pl-5 space-y-3 pt-4 border-t border-gray-100 text-gray-700">
-                        <li>
-                            <span class="font-extrabold text-red-600">若为“自动管理”模式：</span> 
-                            <p class="mt-1 ml-4 text-sm">必须<span class="text-red-600 font-extrabold">关闭</span>“自动管理”，切换至手动管理，并<span class="text-red-600 font-extrabold">开启</span>以下三项开关：</p>
-                            <p class="mt-1 ml-4 text-sm font-mono bg-yellow-100 p-2 rounded inline-block">开机自启动、后台自启动、关联启动</p>
-                        </li>
-                        <li>
-                            <span class="font-extrabold text-red-600">若为“自启动管理”模式：</span> 
-                            <p class="mt-1 ml-4 text-sm">直接<span class="text-red-600 font-extrabold">开启</span>“城市环境服务”的自启动和关联启动开关。</p>
-                        </li>
-                    </ul>
-                </div>
-
-                <!-- Step 2.3: 电池电量设置 (Updated based on v1.1) -->
-                <div class="bg-white p-6 rounded-xl shadow-2xl step-card border-l-4 border-red-500">
-                    <div class="flex items-start space-x-4 mb-4">
-                        <div class="flex-shrink-0 w-12 h-12 bg-red-700 text-white rounded-full flex items-center justify-center font-extrabold text-2xl">5</div>
-                        <div>
-                            <p class="text-xl font-bold text-gray-900 mb-2">电池/电量设置深度优化 (防止APP被系统“杀死”)</p>
-                            <p class="mb-3 font-semibold text-lg text-red-600">目标：所有与“作业云”APP相关的节能限制全部<span class="underline">关闭</span>或设置为<span class="underline">无限制</span>。</p>
-                        </div>
-                    </div>
-                    <ul class="list-disc pl-5 space-y-3 pt-4 border-t border-gray-100 text-gray-700">
-                        <li><span class="font-extrabold text-red-600">省电模式：</span> 立即<span class="text-red-600 font-extrabold">关闭</span>“省电模式”、“超级省电模式”以及“自动进入省电模式”。</li>
-                        <li><span class="font-extrabold text-red-600">耗电策略/省电策略：</span> 查找应用耗电策略，设置为 <span class="font-extrabold text-red-600">无限制</span> 或 <span class="font-extrabold text-red-600">允许后台高耗电</span>。</li>
-                        <li><span class="font-extrabold text-red-600">耗电行为控制：</span> 设置为 <span class="font-extrabold text-red-600">完全允许后台行为</span> (不限制应用的任何后台行为)。</li>
-                        <li><span class="font-extrabold text-red-600">网络连接：</span> 在“更多电池设置”中，务必<span class="text-red-600 font-extrabold">开启</span>“休眠时始终保持网络连接” 和 <span class="text-red-600 font-extrabold">关闭</span>“熄屏5分钟断开网络连接”的选项。</li>
-                        <li><span class="font-extrabold text-red-600">待机优化：</span> 务必<span class="text-red-600 font-extrabold">关闭</span>“睡眠模式”或“睡眠智能待机优化”。</li>
-                        <li><span class="font-extrabold text-red-600">电池优化：</span> 确保设置为 <span class="font-extrabold text-red-600">不优化</span> 或 <span class="text-red-600 font-extrabold">关闭</span>电池优化。</li>
-                    </ul>
-                </div>
-            </div>
-        </section>
-
-        <!-- Section 3: Other Special Permissions (Android/HarmonyOS) -->
-        <section class="mb-12">
-            <h2 class="text-3xl font-bold text-gray-800 border-b-4 border-red-700 pb-3 mb-8">
-                <span class="text-red-700">步骤三：</span> 其他特殊系统设置检查
-            </h2>
-            <p class="text-gray-600 mb-6 font-semibold">
-                （本节主要针对 <span class="text-red-700">Android/HarmonyOS</span> 设备）
-            </p>
-
-            <div class="grid md:grid-cols-3 gap-8">
-                
-                <!-- Card 1: 省流量模式 -->
-                <div class="bg-white p-6 rounded-xl shadow-xl border-t-8 border-indigo-500">
-                    <h3 class="text-xl font-bold text-gray-900 mb-3 flex items-center">
-                        <span class="text-3xl text-indigo-500 mr-3">📶</span> <span class="text-red-600 font-extrabold">禁用</span>省流量模式
-                    </h3>
-                    <p class="text-gray-700">
-                        在 <span class="font-extrabold text-red-600">手机管家</span> 中找到 <span class="font-extrabold text-red-600">流量管理</span>，务必<span class="text-red-600 font-extrabold">关闭</span>“省流量模式”开关。
-                    </p>
-                    <p class="mt-3 text-sm text-yellow-700 bg-yellow-50 p-2 rounded font-medium">
-                        <span class="font-extrabold text-red-600">后果：</span> 开启此模式会阻止后台应用使用移动数据，导致考勤数据和消息无法实时传输。
-                    </p>
-                </div>
-
-                <!-- Card 2: 闲置权限移除 -->
-                <div class="bg-white p-6 rounded-xl shadow-xl border-t-8 border-indigo-500">
-                    <h3 class="text-xl font-bold text-gray-900 mb-3 flex items-center">
-                        <span class="text-3xl text-indigo-500 mr-3">🗑️</span> <span class="text-red-600 font-extrabold">禁用</span>闲置权限移除
-                    </h3>
-                    <p class="text-gray-700">
-                        在 <span class="font-extrabold text-red-600">应用管理</span> &rarr; <span class="font-extrabold text-red-600">城市环境服务</span> 页面中，务必<span class="text-red-600 font-extrabold">关闭</span>以下功能：
-                    </p>
-                    <ul class="list-disc pl-5 mt-3 text-sm text-gray-600 space-y-1">
-                        <li>“移除长期未使用的应用权限”</li>
-                        <li>“暂停闲置应用的活动” / “应用速冻”</li>
-                    </ul>
-                </div>
-                
-                <!-- Card 3: 运动与WLAN权限 -->
-                <div class="bg-white p-6 rounded-xl shadow-xl border-t-8 border-indigo-500">
-                    <h3 class="text-xl font-bold text-gray-900 mb-3 flex items-center">
-                        <span class="text-3xl text-indigo-500 mr-3">🏃</span> 运动与WLAN权限确认
-                    </h3>
-                    <p class="text-gray-700">
-                        在 <span class="font-extrabold text-red-600">应用信息</span> &rarr; <span class="font-extrabold text-red-600">权限</span> 中，再次确认以下权限已明确<span class="text-red-600 font-extrabold">允许</span>：
-                    </p>
-                    <ul class="list-disc pl-5 mt-3 text-sm text-gray-600 space-y-1">
-                        <li><span class="font-extrabold text-red-600">运动与健身</span> / <span class="font-extrabold text-red-600">身体活动信息</span></li>
-                        <li><span class="font-extrabold text-red-600">WLAN (本地网络)</span></li>
-                    </ul>
-                </div>
-            </div>
-        </section>
-
-        <!-- Section 4: iOS/Apple Settings Check -->
-        <section class="mb-12">
-            <h2 class="text-3xl font-bold text-gray-800 border-b-4 border-red-700 pb-3 mb-8">
-                <span class="text-red-700">步骤四：</span> iOS (苹果) 设备权限配置与优化
-            </h2>
-            
-            <!-- iOS Context Card -->
-            <div class="bg-blue-50 border-l-4 border-blue-400 p-4 mb-8 rounded-lg shadow-md">
-                <div class="flex items-start">
-                    <div class="flex-shrink-0 text-blue-500 pt-1">
-                        <!-- Icon: Info Circle -->
-                        <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
-                        </svg>
-                    </div>
-                    <div class="ml-3">
-                        <h3 class="text-lg leading-6 font-medium text-blue-800">APP 名称提醒</h3>
-                        <p class="mt-1 text-sm text-blue-700">
-                            请在 App Store 下载名为 <span class="font-extrabold text-red-600">“城市环境服务”</span> 的应用。以下步骤均基于此应用。
-                        </p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="space-y-8">
-                
-                <!-- Step 4.1: Initial Popups -->
-                <div class="bg-white p-6 rounded-xl shadow-2xl step-card border-l-4 border-blue-500">
-                    <div class="flex items-start space-x-4">
-                        <div class="flex-shrink-0 w-12 h-12 bg-blue-700 text-white rounded-full flex items-center justify-center font-extrabold text-2xl">1</div>
-                        <div>
-                            <p class="text-xl font-bold text-gray-900 mb-2">初始授权弹窗配置（首次打开）</p>
-                            <ul class="list-disc pl-5 space-y-3 text-gray-700">
-                                <li>
-                                    <span class="font-extrabold text-red-600">无线数据/网络：</span>
-                                    选择 <span class="font-mono bg-gray-100 px-2 py-0.5 rounded-md text-red-600 font-semibold text-sm">无线局域网与蜂窝网络</span>。
-                                </li>
-                                <li>
-                                    <span class="font-extrabold text-red-600">隐私政策：</span>
-                                    选择 <span class="font-mono bg-gray-100 px-2 py-0.5 rounded-md text-red-600 font-semibold text-sm">同意并继续</span>。
-                                </li>
-                                <li>
-                                    <span class="font-extrabold text-red-600">运动与健康/健身：</span>
-                                    选择 <span class="font-mono bg-gray-100 px-2 py-0.5 rounded-md text-red-600 font-semibold text-sm">好</span>（允许访问活动与体能训练记录）。
-                                </li>
-                                <li>
-                                    <span class="font-extrabold text-red-600">初始定位：</span>
-                                    定位权限弹窗中选择 <span class="font-mono bg-gray-100 px-2 py-0.5 rounded-md text-red-600 font-semibold text-sm">使用App时允许</span>。
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Step 4.2: Location Settings -->
-                <div class="bg-white p-6 rounded-xl shadow-2xl step-card border-l-4 border-blue-500">
-                    <div class="flex items-start space-x-4">
-                        <div class="flex-shrink-0 w-12 h-12 bg-blue-700 text-white rounded-full flex items-center justify-center font-extrabold text-2xl">2</div>
-                        <div>
-                            <p class="text-xl font-bold text-gray-900 mb-2">定位权限深度配置 (保障后台考勤)</p>
-                            <p class="mb-3 text-gray-700">这是最关键的步骤，必须手动进入设置修改，确保后台定位功能正常工作：</p>
-                            <ul class="list-disc pl-5 space-y-3 text-gray-700">
-                                <li>
-                                    <span class="font-extrabold text-red-600">进入设置：</span>
-                                    路径为 <span class="font-extrabold text-red-600">设置</span> &rarr; 找到 <span class="font-extrabold text-red-600">城市环境服务</span> (或 <span class="font-extrabold text-red-600">设置</span> &rarr; <span class="font-extrabold text-red-600">App</span> &rarr; <span class="font-extrabold text-red-600">城市环境服务</span>)。
-                                </li>
-                                <li>
-                                    <span class="font-extrabold text-red-600">位置权限：</span>
-                                    点击 <span class="font-extrabold text-red-600">位置</span>，将权限从“使用App期间”改为 <span class="font-mono bg-gray-100 px-2 py-0.5 rounded-md text-red-600 font-semibold text-sm">始终</span>。
-                                </li>
-                                <li>
-                                    <span class="font-extrabold text-red-600">精确位置：</span>
-                                    务必 <span class="text-red-600 font-extrabold">开启</span> <span class="font-mono bg-gray-100 px-2 py-0.5 rounded-md text-red-600 font-semibold text-sm">精确位置</span> 开关。
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Step 4.3: Background and General Permissions -->
-                <div class="bg-white p-6 rounded-xl shadow-2xl step-card border-l-4 border-blue-500">
-                    <div class="flex items-start space-x-4">
-                        <div class="flex-shrink-0 w-12 h-12 bg-blue-700 text-white rounded-full flex items-center justify-center font-extrabold text-2xl">3</div>
-                        <div>
-                            <p class="text-xl font-bold text-gray-900 mb-2">后台与其他关键设置</p>
-                            <p class="mb-3 text-gray-700">在 <span class="font-extrabold text-red-600">设置</span> &rarr; <span class="font-extrabold text-red-600">城市环境服务</span> 页面内，确保以下权限已明确<span class="text-red-600 font-extrabold">开启</span>：</p>
-                            <div class="grid grid-cols-2 gap-4 text-sm font-semibold text-gray-700">
-                                <span class="flex items-center p-2 bg-green-50 rounded-lg"><span class="text-green-500 text-lg mr-2">✓</span> <span class="text-red-700 font-extrabold">后台 App 刷新</span></span>
-                                <span class="flex items-center p-2 bg-green-50 rounded-lg"><span class="text-green-500 text-lg mr-2">✓</span> 通知</span>
-                                <span class="flex items-center p-2 bg-green-50 rounded-lg"><span class="text-green-500 text-lg mr-2">✓</span> 无线数据</span>
-                                <span class="flex items-center p-2 bg-green-50 rounded-lg"><span class="text-green-500 text-lg mr-2">✓</span> 运动与健身</span>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-
-        <!-- Footer -->
-        <footer class="mt-16 bg-gray-900 text-white">
-            <div class="max-w-7xl mx-auto py-8 px-4 sm:px-6 lg:px-8 text-center text-sm">
-                <p class="text-xl mb-2 font-semibold text-red-400">玉禾田环境发展集团股份有限公司</p>
-                <p>&copy; 科技创造价值 | 智慧环卫, 就在你身边</p>
-                <p class="mt-2 text-gray-400">本培训教程由智转中心编制，旨在提供清晰的配置指导。如有任何疑问或遇到异常，请及时与实施经理反馈。</p>
-            </div>
-        </footer>
-
-    </main>
-
+  <body class="bg-slate-50 text-slate-900 antialiased">
+    <div id="root"></div>
+  <script type="module" src="/index.tsx"></script>
 </body>
 </html>
